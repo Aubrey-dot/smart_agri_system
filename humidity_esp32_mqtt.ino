@@ -6,7 +6,7 @@
 String URL = "http://192.168.1.159/dht11_project/test_data.php";
 
 const char* ssid     = "Au-B";
-const char* password = "mph4ts00!";
+const char* password = "";
 const char* mqtt_server = "broker.hivemq.com";
 
 WiFiClient espClient;
