@@ -1,0 +1,6 @@
+"-specs=C:/Users/aubrey/Documents/Development/smart_agri_system/build/bootloader/specs/picolibc.specs"
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
