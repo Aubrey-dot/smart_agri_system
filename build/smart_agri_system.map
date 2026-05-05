@@ -17628,6 +17628,7 @@ LOAD esp-idf/htu21d/libhtu21d.a
 LOAD esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a
 LOAD esp-idf/cmock/libcmock.a
 LOAD esp-idf/unity/libunity.a
+LOAD esp-idf/driver/libdriver.a
 LOAD esp-idf/esp_blockdev_util/libesp_blockdev_util.a
 LOAD esp-idf/esp_driver_cam/libesp_driver_cam.a
 LOAD esp-idf/esp_driver_dac/libesp_driver_dac.a
@@ -17643,10 +17644,10 @@ LOAD esp-idf/esp_driver_sdio/libesp_driver_sdio.a
 LOAD esp-idf/esp_driver_sdm/libesp_driver_sdm.a
 LOAD esp-idf/esp_driver_touch_sens/libesp_driver_touch_sens.a
 LOAD esp-idf/esp_driver_twai/libesp_driver_twai.a
+LOAD esp-idf/esp_hal_twai/libesp_hal_twai.a
 LOAD esp-idf/esp_eth/libesp_eth.a
 LOAD esp-idf/esp_hid/libesp_hid.a
 LOAD esp-idf/esp_lcd/libesp_lcd.a
-LOAD esp-idf/esp_driver_i2c/libesp_driver_i2c.a
 LOAD esp-idf/esp_hal_lcd/libesp_hal_lcd.a
 LOAD esp-idf/esp_local_ctrl/libesp_local_ctrl.a
 LOAD esp-idf/esp_https_server/libesp_https_server.a
@@ -17664,8 +17665,7 @@ LOAD esp-idf/esp_driver_spi/libesp_driver_spi.a
 LOAD esp-idf/perfmon/libperfmon.a
 LOAD esp-idf/rt/librt.a
 LOAD esp-idf/spiffs/libspiffs.a
-LOAD esp-idf/driver/libdriver.a
-LOAD esp-idf/esp_hal_twai/libesp_hal_twai.a
+LOAD esp-idf/esp_driver_i2c/libesp_driver_i2c.a
 LOAD esp-idf/xtensa/libxtensa.a
 LOAD esp-idf/esp_stdio/libesp_stdio.a
 LOAD esp-idf/esp_hal_gpspi/libesp_hal_gpspi.a
