@@ -1,4 +1,0 @@
-Command: cmake -G Ninja -B C:\Users\aubrey\Documents\Development\smart_agri_system\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=False C:\Users\aubrey\Documents\Development\smart_agri_system
-CMake Error: Error: generator : Ninja
-Does not match the generator used previously: MinGW Makefiles
-Either remove the CMakeCache.txt file and CMakeFiles directory or choose a different binary directory.

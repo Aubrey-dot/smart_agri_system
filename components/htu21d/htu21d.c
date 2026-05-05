@@ -39,12 +39,31 @@ esp_err_t htu21d_init(i2c_port_t port, gpio_num_t sda, gpio_num_t scl){
     }
 
     //wait for reset to complete
-    vTaskDelay(pdMS_TO_TICKS(HTU21D_RESET_DELAYS_MS));
+    vTaskDelay(pdMS_TO_TICKS(HTU21D_RESET_DELAY_MS));
 
     ESP_LOGI(TAG, "Initialized successfuly");
     return ESP_OK;
 }
 
+//crc check
+static uint8_t htu21d_crc_check(uint8_t *data, uint8_t len){
+    uint8_t crc = 0X00;
+
+    for (uint8_t i = 0; i < len; i++){
+        crc ^= data[i];
+        for (uint8_t bit = 0; bit < 8; bit++){
+            if (crc & 0X80){
+                crc = (crc <<1) ^ 0x31;
+            }
+            else {
+                crc <<= 1;
+            }
+        }
+    }
+    return crc;
+}
+
+//read temperature
 esp_err_t htu21d_read_temperature(i2c_port_t port, float *temperature){
     if (temperature == NULL){
         return ESP_ERR_INVALID_ARG;
@@ -66,6 +85,11 @@ esp_err_t htu21d_read_temperature(i2c_port_t port, float *temperature){
 
     //Read bytes: MSB, LSB, CRC
     uint8_t data[3];
+    if (htu21d_crc_check(data,2) != data[2]){
+        ESP_LOGE(TAG, "Temp CRC check failed");
+        return HTU21D_ERR_CRC;
+    }
+
     ret = i2c_master_read_from_device(port, HTU21D_I2C_ADDR, data, 3,pdMS_TO_TICKS(100));
  
     if(ret != ESP_OK){
@@ -104,6 +128,11 @@ esp_err_t htu21d_read_humidity(i2c_port_t port, float *humidity){
 
     //Read bytes: MSB, LSB, CRC
     uint8_t data[3];
+    if (htu21d_crc_check(data,2) != data[2]){
+        ESP_LOGE(TAG, "Humidity CRC check failed");
+        return HTU21D_ERR_CRC;
+    }
+    
     ret = i2c_master_read_from_device(port, HTU21D_I2C_ADDR, data, 3,pdMS_TO_TICKS(100));
  
     if(ret != ESP_OK){
@@ -119,4 +148,27 @@ esp_err_t htu21d_read_humidity(i2c_port_t port, float *humidity){
 
     return ESP_OK;
 }
+
+esp_err_t htu21d_read_all(i2c_port_t port, htu21d_data_t *data){
+    if (data == NULL){
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    esp_err_t ret;
+
+    ret =  htu21d_read_temperature(port,&data->temperature);
+    if(ret != ESP_OK){
+        ESP_LOGE(TAG, "Failed to read tempeature: %s",esp_err_to_name(ret));
+        return ret;
+    }
+
+    ret = htu21d_read_humidity(port, &data->humidity);
+    if (ret != ESP_OK){
+        ESP_LOGE(TAG, "Failed to read Humidity: %s",esp_err_to_name(ret));
+        return ret;
+    }
+
+    return ESP_OK;
+}
+
 
