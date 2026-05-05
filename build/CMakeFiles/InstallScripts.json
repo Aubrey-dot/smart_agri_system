@@ -157,8 +157,8 @@
 		"C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/rt/cmake_install.cmake",
 		"C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/spiffs/cmake_install.cmake",
 		"C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/ulp/cmake_install.cmake",
-		"C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/cmake_install.cmake",
-		"C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/cmake_install.cmake"
+		"C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/cmake_install.cmake",
+		"C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

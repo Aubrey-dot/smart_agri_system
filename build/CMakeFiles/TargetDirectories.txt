@@ -1089,13 +1089,6 @@ C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/ulp/CMakeF
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/ulp/CMakeFiles/install.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/ulp/CMakeFiles/install/local.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/ulp/CMakeFiles/install/strip.dir
-C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/__idf_main.dir
-C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/edit_cache.dir
-C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
-C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/list_install_components.dir
-C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/install.dir
-C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/install/local.dir
-C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/install/strip.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/__idf_htu21d.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/edit_cache.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/rebuild_cache.dir
@@ -1103,3 +1096,10 @@ C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMa
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/install.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/install/local.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/install/strip.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/__idf_main.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/edit_cache.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/list_install_components.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/install.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/install/local.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/CMakeFiles/install/strip.dir

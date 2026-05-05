@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "C:/esp/v6.0.1/esp-idf/components/**",
                 "C:/Users/aubrey/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/xtensa-esp32-elf/include/**",
-                "${workspaceFolder}/build/config"
+                "${workspaceFolder}/build/config",
+                "C:/esp/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include"
             ],
             "defines": [
                 "_DEBUG",

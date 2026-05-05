@@ -198,5 +198,7 @@ C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/esp_driver
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/perfmon/libperfmon.a
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/rt/librt.a
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/spiffs/libspiffs.a
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/libhtu21d.a
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/libmain.a
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/libhtu21d.a
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/fatfs/libfatfs.a

@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/i2c_master.h"
+#include "esp_log.h"
+#include "htu21d.h"
+
+static const char *TAG = "MAIN";
+
+//----I2C Bus Config----------------------------------------
+#define I2C_PORT I2C_NUM_0
+#define I2C_SDA_PIN GPIO_NUM_21
+#define I2C_SCL_PIN GPIO_NUM_22
+#define I2C_SPEED_HZ 400000
+
+void app_main(void)
+{
+    i2c_master_bus_config_t bus_cfg = {
+        .i2c_port = I2C_PORT,
+        .sda_io_num = I2C_SDA_PIN,
+        .scl_io_num = I2C_SCL_PIN,
+        .clk_source = I2C_CLK_SRC_DEFAULT,
+        .glitch_ignore_cnt = 7,
+        .flags.enable_internal_pullup = true,
+    };
+
+    i2c_master_bus_handle_t bus_handle;
+    ESP_ERROR_CHECK(i2c_new_master_bus(&bus_cfg,&bus_handle));
+    ESP_LOGI(TAG, "I2C bus created");
+
+    //init HTU21D
+    htu21d_handle_t htu21d;
+    ESP_ERROR_CHECK(htu21d_init(bus_handle, &htu21d));
+
+    //Read
+    htu21d_data_t data;
+    while(1){
+        esp_err_t ret = htu21d_read_all(&htu21d, &data);
+        if (ret == ESP_OK){
+            ESP_LOGI(TAG, "Temperature: %.2f C",data.temperature);
+            ESP_LOGI(TAG, "Humidity: %.2f C",data.humidity);
+        }
+        else{
+            ESP_LOGE(TAG, "Read Failed: %s", esp_err_to_name(ret));
+        }
+        vTaskDelay(pdMS_TO_TICKS(2000));
+    }
+}
