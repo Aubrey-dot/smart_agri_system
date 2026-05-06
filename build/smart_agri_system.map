@@ -17404,6 +17404,8 @@ LOAD esp-idf/perfmon/libperfmon.a
 LOAD esp-idf/rt/librt.a
 LOAD esp-idf/spiffs/libspiffs.a
 LOAD esp-idf/htu21d/libhtu21d.a
+LOAD esp-idf/k0i05__esp_type_utils/libk0i05__esp_type_utils.a
+LOAD esp-idf/k0i05__esp_ssd1306/libk0i05__esp_ssd1306.a
 LOAD esp-idf/main/libmain.a
 LOAD esp-idf/unity/libunity.a
 LOAD esp-idf/esp_hal_ledc/libesp_hal_ledc.a
@@ -17425,7 +17427,9 @@ LOAD esp-idf/sdmmc/libsdmmc.a
 LOAD esp-idf/esp_hal_sd/libesp_hal_sd.a
 LOAD esp-idf/wear_levelling/libwear_levelling.a
 LOAD esp-idf/htu21d/libhtu21d.a
+LOAD esp-idf/k0i05__esp_ssd1306/libk0i05__esp_ssd1306.a
 LOAD esp-idf/esp_driver_i2c/libesp_driver_i2c.a
+LOAD esp-idf/k0i05__esp_type_utils/libk0i05__esp_type_utils.a
 LOAD esp-idf/xtensa/libxtensa.a
 LOAD esp-idf/esp_stdio/libesp_stdio.a
 LOAD esp-idf/esp_hal_gpspi/libesp_hal_gpspi.a

@@ -199,6 +199,10 @@ $<TARGET_FILE:idf::perfmon>
 $<TARGET_FILE:idf::rt>
 $<TARGET_FILE:idf::spiffs>
 $<TARGET_FILE:idf::htu21d>
+$<TARGET_FILE:idf::k0i05__esp_type_utils>
+$<TARGET_FILE:idf::k0i05__esp_ssd1306>
+$<TARGET_FILE:__idf_k0i05__esp_type_utils>
 $<TARGET_FILE:idf::main>
 $<TARGET_FILE:__idf_htu21d>
 $<TARGET_FILE:__idf_fatfs>
+$<TARGET_FILE:__idf_k0i05__esp_ssd1306>

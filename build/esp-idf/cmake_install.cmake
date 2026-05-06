@@ -724,6 +724,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/k0i05__esp_type_utils/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/k0i05__esp_ssd1306/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/cmake_install.cmake")
 endif()
 
