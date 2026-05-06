@@ -6,5 +6,7 @@
     "--query-driver=**",
     "--compile-commands-dir=c:\\Users\\aubrey\\Documents\\Development\\smart_agri_system\\build"
   ],
-  "idf.customExtraVars": {}
+  "idf.customExtraVars": {},
+  "idf.portWin": "COM8",
+  "idf.flashType": "UART"
 }

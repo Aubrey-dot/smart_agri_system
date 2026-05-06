@@ -21,12 +21,21 @@ void app_main(void)
         .scl_io_num = I2C_SCL_PIN,
         .clk_source = I2C_CLK_SRC_DEFAULT,
         .glitch_ignore_cnt = 7,
-        .flags.enable_internal_pullup = true,
+        .flags.enable_internal_pullup = false,
     };
 
     i2c_master_bus_handle_t bus_handle;
     ESP_ERROR_CHECK(i2c_new_master_bus(&bus_cfg,&bus_handle));
     ESP_LOGI(TAG, "I2C bus created");
+
+    ESP_LOGI(TAG, "Scanning I2C bus...");
+    for (uint8_t addr = 1; addr < 127; addr++) {
+        esp_err_t ret = i2c_master_probe(bus_handle, addr, pdMS_TO_TICKS(50));
+        if (ret == ESP_OK) {
+            ESP_LOGI(TAG, "Device found at address 0x%02X", addr);
+        }
+    }
+    ESP_LOGI(TAG, "Scan complete");
 
     //init HTU21D
     htu21d_handle_t htu21d;

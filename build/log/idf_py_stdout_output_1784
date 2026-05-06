@@ -1,0 +1,292 @@
+Command: C:\Users\aubrey\.espressif\python_env\idf6.0_py3.12_env\Scripts\python.exe C:\esp\v6.0.1\esp-idf\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\aubrey\Documents\Development\smart_agri_system\build\smart_agri_system.elf C:\Users\aubrey\Documents\Development\smart_agri_system\build\bootloader\bootloader.elf --force-color -m 'C:\Users\aubrey\.espressif\python_env\idf6.0_py3.12_env\Scripts\python.exe' 'C:\esp\v6.0.1\esp-idf\tools\idf.py' '-p' 'COM8'
+ets Jul�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.1-1-gee08b4d1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May  5 2026 21:43:29[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a018h ( 40984) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a040 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001ca74 vaddr=40080000 size=035a4h ( 13732) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=100bch ( 65724) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=000300e4 vaddr=400835a4 size=07a78h ( 31352) load[0m
+[0;32mI (150) esp_image: segment 5: paddr=00037b64 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (156) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (156) boot: Disabling RNG early entropy source...[0m
+[0;32mI (168) cpu_start: Multicore app[0m
+[0;32mI (177) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (177) cpu_start: Pro cpu start user code[0m
+[0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (179) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     smart_agri_system[0m
+[0;32mI (187) app_init: App version:      ff82f7c-dirty[0m
+[0;32mI (192) app_init: Compile time:     May  5 2026 21:50:19[0m
+[0;32mI (197) app_init: ELF file SHA256:  72373506c...[0m
+[0;32mI (201) app_init: ESP-IDF:          v6.0.1-1-gee08b4d1-dirty[0m
+[0;32mI (206) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (210) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (214) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (218) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (229) heap_init: At 3FFB33F8 len 0002CC08 (179 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008B01C len 00014FE4 (83 KiB): IRAM[0m
+[0;33mW (252) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (264) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) MAIN: I2C bus created[0m
+[0;32mI (304) HTU21D: Initialized successfuly[0m
+[0;33mW (304) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (304) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (314) i2c.master: I2C software timeout[0m
+[1;31mE (314) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (314) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (324) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (2324) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (2324) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (2374) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (2374) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (2384) i2c.master: I2C software timeout[0m
+[1;31mE (2384) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (2384) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (2384) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (4394) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (4394) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (4404) i2c.master: I2C software timeout[0m
+[1;31mE (4404) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (4404) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (4404) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (6414) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (6414) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (6464) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (6464) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (6474) i2c.master: I2C software timeout[0m
+[1;31mE (6474) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (6474) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (6474) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (8484) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (8484) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (8494) i2c.master: I2C software timeout[0m
+[1;31mE (8494) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (8494) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (8494) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (10504) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (10504) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (10514) i2c.master: I2C software timeout[0m
+[1;31mE (10514) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (10514) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (10514) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (12524) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (12524) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (12534) i2c.master: I2C software timeout[0m
+[1;31mE (12534) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (12534) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (12534) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (14544) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (14544) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (14554) i2c.master: I2C software timeout[0m
+[1;31mE (14554) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (14554) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (14554) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (16564) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (16564) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (16614) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (16614) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (16624) i2c.master: I2C software timeout[0m
+[1;31mE (16624) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (16624) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (16624) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (18634) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (18634) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (18644) i2c.master: I2C software timeout[0m
+[1;31mE (18644) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (18644) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (18644) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (20654) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (20654) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (20664) i2c.master: I2C software timeout[0m
+[1;31mE (20664) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (20664) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (20664) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (22674) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (22674) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (22724) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (22724) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (22734) i2c.master: I2C software timeout[0m
+[1;31mE (22734) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (22734) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (22734) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (24744) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (24744) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (24794) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (24794) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (24804) i2c.master: I2C software timeout[0m
+[1;31mE (24804) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (24804) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (24804) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (26814) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (26814) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (26864) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (26864) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (26874) i2c.master: I2C software timeout[0m
+[1;31mE (26874) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (26874) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (26874) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (28884) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (28884) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (28894) i2c.master: I2C software timeout[0m
+[1;31mE (28894) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (28894) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (28894) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (30904) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (30904) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (30954) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (30954) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (30964) i2c.master: I2C software timeout[0m
+[1;31mE (30964) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (30964) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (30964) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (32974) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (32974) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (33024) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (33024) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (33034) i2c.master: I2C software timeout[0m
+[1;31mE (33034) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (33034) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (33034) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (35044) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (35044) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (35054) i2c.master: I2C software timeout[0m
+[1;31mE (35054) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (35054) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (35054) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (37064) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (37064) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (37074) i2c.master: I2C software timeout[0m
+[1;31mE (37074) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (37074) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (37074) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (39084) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (39084) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (39094) i2c.master: I2C software timeout[0m
+[1;31mE (39094) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (39094) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (39094) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (41104) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (41104) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (41154) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (41154) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (41164) i2c.master: I2C software timeout[0m
+[1;31mE (41164) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (41164) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (41164) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (43174) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (43174) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (43184) i2c.master: I2C software timeout[0m
+[1;31mE (43184) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (43184) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (43184) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (45194) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (45194) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (45204) i2c.master: I2C software timeout[0m
+[1;31mE (45204) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (45204) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (45204) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (47214) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (47214) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (47224) i2c.master: I2C software timeout[0m
+[1;31mE (47224) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (47224) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (47224) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (49234) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (49234) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (49244) i2c.master: I2C software timeout[0m
+[1;31mE (49244) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (49244) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (49244) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (51254) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (51254) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (51264) i2c.master: I2C software timeout[0m
+[1;31mE (51264) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (51264) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (51264) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (53274) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (53274) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (53324) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (53324) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (53334) i2c.master: I2C software timeout[0m
+[1;31mE (53334) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (53334) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (53334) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (55344) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (55344) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (55354) i2c.master: I2C software timeout[0m
+[1;31mE (55354) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (55354) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (55354) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (57364) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (57364) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (57374) i2c.master: I2C software timeout[0m
+[1;31mE (57374) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (57374) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (57374) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (59384) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (59384) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (59394) i2c.master: I2C software timeout[0m
+[1;31mE (59394) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (59394) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (59394) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (61404) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (61404) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (61414) i2c.master: I2C software timeout[0m
+[1;31mE (61414) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (61414) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (61414) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (63424) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (63424) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (63434) i2c.master: I2C software timeout[0m
+[1;31mE (63434) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (63434) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (63434) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (65444) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (65444) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (65454) i2c.master: I2C software timeout[0m
+[1;31mE (65454) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (65454) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (65454) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (67464) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (67464) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[0;33mW (67514) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (67514) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (67524) i2c.master: I2C software timeout[0m
+[1;31mE (67524) HTU21D: Failed to read temp: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (67524) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (67524) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m
+[0;33mW (69534) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (69534) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (69544) i2c.master: I2C software timeout[0m
+[1;31mE (69544) HTU21D: Temp commad failed: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (69544) HTU21D: Failed to read tempeature: ESP_ERR_INVALID_RESPONSE[0m
+[1;31mE (69544) MAIN: Read Failed: ESP_ERR_INVALID_RESPONSE[0m

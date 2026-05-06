@@ -5,7 +5,7 @@
 #include "esp_err.h"
 
 //----I2C Address------------------------------------
-#define HTU21D_I2C_ADDR 0X40
+#define HTU21D_I2C_ADDR 0x40
 
 //--------Commands-----------------------------------------
 #define HTU21D_CMD_TEMP 0xF3 //start temp measurement no hold master mode
