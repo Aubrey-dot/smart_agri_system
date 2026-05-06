@@ -32,20 +32,25 @@ void sensor_task(void *pvParameters){
         data.timestamp_ms = esp_timer_get_time()/1000;
 
         //read sensor
-        esp_err_t ret = htu21d_read_all(htu21d,(htu21d_data_t *)&data.temperature);
+        htu21d_data_t sensor_read;
+        esp_err_t ret = htu21d_read_all(htu21d,&sensor_read);
         if (ret == ESP_OK){
+            data.temperature = sensor_read.temperature;
+            data.humidity    = sensor_read.humidity;
+            data.timestamp_ms = esp_timer_get_time()/1000;
             xQueueSend(q_logger, &data, 0);
             xQueueSend(q_mqtt, &data, 0);
             xQueueSend(q_display, &data, 0);
 
-            ESP_LOGI(TAG, "%.2f %.2f t=%" PRId64 "ms", data.temperature, data.humidity, data.timestamp_ms);
+            ESP_LOGI(TAG, "%.2f C %.2f %% t=%" PRId64 "ms", data.temperature, data.humidity, data.timestamp_ms);
         }
         else{
-            ESP_LOGE(TAG, "Read Failed: ", esp_err_to_name(ret));
+            ESP_LOGE(TAG, "Read Failed: %s", esp_err_to_name(ret));
         }
+        //wait 2 seconds
+        vTaskDelay(pdMS_TO_TICKS(2000));
     }
 
-    //wait 2 seconds
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    
 
 }
