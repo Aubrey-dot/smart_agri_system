@@ -4,6 +4,7 @@
 #include "driver/i2c_master.h"
 #include "esp_log.h"
 #include "htu21d.h"
+#include "sensor_task.h"
 
 static const char *TAG = "MAIN";
 
@@ -41,17 +42,29 @@ void app_main(void)
     htu21d_handle_t htu21d;
     ESP_ERROR_CHECK(htu21d_init(bus_handle, &htu21d));
 
+    //sensor task
+    xTaskCreatePinnedToCore(
+        sensor_task,
+        "sensor_task",
+        4096,
+        &htu21d,
+        5,
+        NULL,
+        0
+    );
+
+    ESP_LOGI(TAG, "System started");
     //Read
-    htu21d_data_t data;
-    while(1){
-        esp_err_t ret = htu21d_read_all(&htu21d, &data);
-        if (ret == ESP_OK){
-            ESP_LOGI(TAG, "Temperature: %.2f C",data.temperature);
-            ESP_LOGI(TAG, "Humidity: %.2f C",data.humidity);
-        }
-        else{
-            ESP_LOGE(TAG, "Read Failed: %s", esp_err_to_name(ret));
-        }
-        vTaskDelay(pdMS_TO_TICKS(2000));
-    }
+  //  htu21d_data_t data;
+   // while(1){
+   //     esp_err_t ret = htu21d_read_all(&htu21d, &data);
+   //     if (ret == ESP_OK){
+   //         ESP_LOGI(TAG, "Temperature: %.2f C",data.temperature);
+   //         ESP_LOGI(TAG, "Humidity: %.2f %%",data.humidity);
+   //     }
+   //     else{
+   //         ESP_LOGE(TAG, "Read Failed: %s", esp_err_to_name(ret));
+   //     }
+   //     vTaskDelay(pdMS_TO_TICKS(2000));
+   // }
 }

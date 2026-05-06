@@ -2,11 +2,13 @@ idf_component_register(
     SRCS 
         "shared_data.c" 
         "main.c"
+        "sensor_task.c"
     INCLUDE_DIRS "."
     REQUIRES
         htu21d
         esp_driver_i2c
         nvs_flash
         fatfs
-        spi_flash       
+        spi_flash
+        esp_timer       
                     )
