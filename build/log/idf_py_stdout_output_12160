@@ -1,0 +1,12 @@
+Command: ninja all
+[1/6] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\aubrey\Documents\Development\smart_agri_system\build\bootloader && C:\Users\aubrey\.espressif\python_env\idf6.0_py3.12_env\Scripts\python.exe C:/esp/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/aubrey/Documents/Development/smart_agri_system/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
+[2/6] No install step for 'bootloader'
+[3/6] Completed 'bootloader'
+[4/6] Linking CXX executable smart_agri_system.elf
+FAILED: smart_agri_system.elf 
+C:\Windows\system32\cmd.exe /C "cd . && C:\Users\aubrey\.espressif\tools\xtensa-esp-elf\esp-15.2.0_20251204\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe @"C:/Users/aubrey/Documents/Development/smart_agri_system/build/toolchain/cxxflags" @"C:/Users/aubrey/Documents/Development/smart_agri_system/build/toolchain/ldflags" -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32=0 -Wl,--Map=C:/Users/aubrey/Documents/Development/smart_agri_system/build/smart_agri_system.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=error -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32.peripherals.ld -T esp32.rom.ld -T esp32.rom.api.ld -T esp32.rom.libgcc.ld -T esp32.rom.libc-funcs.ld -T memory.ld -T sections.ld -u include_esp_phy_override @CMakeFiles\smart_agri_system.elf.rsp -o smart_agri_system.elf && cd ."
+C:/Users/aubrey/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.c.obj):(.literal.app_main+0x28): undefined reference to `display_task'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

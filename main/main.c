@@ -5,6 +5,7 @@
 #include "esp_log.h"
 #include "htu21d.h"
 #include "sensor_task.h"
+#include "display_task.h"
 
 static const char *TAG = "MAIN";
 
@@ -36,7 +37,7 @@ void app_main(void)
         }
     }
     ESP_LOGI(TAG, "Scan complete");
-*/
+*/  
     //init HTU21D
     static htu21d_handle_t htu21d;
     ESP_ERROR_CHECK(htu21d_init(bus_handle, &htu21d));
@@ -50,6 +51,21 @@ void app_main(void)
         5,
         NULL,
         0
+    );
+
+    //display task
+    display_task_params_t disp_params = {
+        .bus = bus_handle
+    };
+    
+    xTaskCreatePinnedToCore(
+        display_task,
+        "display_task",
+        4096,
+        &disp_params,
+        4,
+        NULL,
+        1
     );
 
     ESP_LOGI(TAG, "System started");

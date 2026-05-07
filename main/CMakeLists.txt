@@ -3,6 +3,7 @@ idf_component_register(
         "shared_data.c" 
         "main.c"
         "sensor_task.c"
+        "display_task.c"
     INCLUDE_DIRS "."
     REQUIRES
         htu21d

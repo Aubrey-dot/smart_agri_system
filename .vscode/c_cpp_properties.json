@@ -8,7 +8,9 @@
                 "C:/Users/aubrey/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/xtensa-esp32-elf/include/**",
                 "${workspaceFolder}/build/config",
                 "C:/esp/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include",
-                "C:/esp/v6.0.1/esp-idf/components/esp_driver_i2c/include"
+                "C:/esp/v6.0.1/esp-idf/components/esp_driver_i2c/include",
+                "C:/esp/v6.0.1/esp-idf/components/freertos/config/include/freertos",
+                "C:/esp/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/portable/linux/include/freertos"
             ],
             "defines": [
                 "_DEBUG",

@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "smart_agri_system",
-    "project_version":    "c529705-dirty",
+    "project_version":    "da454da-dirty",
     "project_path":       "C:/Users/aubrey/Documents/Development/smart_agri_system",
     "idf_path":           "C:/esp/v6.0.1/esp-idf",
     "build_dir":          "C:/Users/aubrey/Documents/Development/smart_agri_system/build",
@@ -1810,7 +1810,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "k0i05__esp_ssd1306" ],
             "file": "C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/aubrey/Documents/Development/smart_agri_system/main/shared_data.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/main.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/sensor_task.c" ],
+            "sources": [ "C:/Users/aubrey/Documents/Development/smart_agri_system/main/shared_data.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/main.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/sensor_task.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/display_task.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
