@@ -23,27 +23,27 @@ void display_task(void *pvParameters){
     ssd1306_clear_display(dev_handle, false);
 
     //----startup screen-------------------------------
-    ssd1306_display_text(dev_handle,0, "Smart Agri-System", false);
+    ssd1306_display_text(dev_handle,0, "Smart Agri-Sys", false);
     ssd1306_display_text(dev_handle,1, "Starting", false);
     vTaskDelay(pdMS_TO_TICKS(2000));
 
     sensor_data_t data;
-    char line[17];
+    char line[32];
     ssd1306_clear_display(dev_handle, false);
     while(1){
         if (xQueueReceive(q_display,&data, portMAX_DELAY) == pdTRUE){
             
-            ssd1306_display_text(dev_handle,0, "Smart Agri-System", false);
+            ssd1306_display_text(dev_handle,0, "Smart Agri-Sys", false);
             //display temp
             snprintf(line, sizeof(line), "Temp: %.1fC", data.temperature);
             ssd1306_display_text(dev_handle,2, line, false);
-
+            
             //display Humidity
             snprintf(line, sizeof(line), "Hum: %.1f%%", data.humidity);
             ssd1306_display_text(dev_handle,4, line, false);
 
-             //display timestamp
-            snprintf(line, sizeof(line), "t: %" PRId64 "ms", data.timestamp_ms);
+            //display timestamp
+            snprintf(line, sizeof(line), "T: %" PRId64 "ms", data.timestamp_ms);
             ssd1306_display_text(dev_handle,6, line, false);
         }
     }

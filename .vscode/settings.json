@@ -8,5 +8,6 @@
   ],
   "idf.customExtraVars": {},
   "idf.portWin": "COM8",
-  "idf.flashType": "UART"
+  "idf.flashType": "UART",
+  "C_Cpp.errorSquiggles": "disabled"
 }
