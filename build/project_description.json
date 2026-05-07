@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "smart_agri_system",
-    "project_version":    "da454da-dirty",
+    "project_version":    "5633f29-dirty",
     "project_path":       "C:/Users/aubrey/Documents/Development/smart_agri_system",
     "idf_path":           "C:/esp/v6.0.1/esp-idf",
     "build_dir":          "C:/Users/aubrey/Documents/Development/smart_agri_system/build",
