@@ -17,6 +17,7 @@ static const char *TAG = "MAIN";
 
 void app_main(void)
 {
+    //configure i2c bus
     i2c_master_bus_config_t bus_cfg = {
         .i2c_port = I2C_PORT,
         .sda_io_num = I2C_SDA_PIN,

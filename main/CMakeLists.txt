@@ -4,6 +4,7 @@ idf_component_register(
         "main.c"
         "sensor_task.c"
         "display_task.c"
+        "mqqt_task.c"
     INCLUDE_DIRS "."
     REQUIRES
         htu21d
@@ -11,5 +12,6 @@ idf_component_register(
         nvs_flash
         fatfs
         spi_flash
-        esp_timer       
+        esp_timer
+        esp_wifi       
                     )

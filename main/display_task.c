@@ -8,11 +8,12 @@ static const char *TAG  = "DISPLAY_TASK";
 void display_task(void *pvParameters){
     display_task_params_t *params = (display_task_params_t *)pvParameters;
 
-    //init
+    //init 
     ssd1306_config_t dev_cfg = I2C_SSD1306_128x64_CONFIG_DEFAULT;
     ssd1306_handle_t dev_handle;
     ssd1306_init (params->bus, &dev_cfg, &dev_handle);
-
+    
+    //check if pointer created
     if (dev_handle == NULL){
         ESP_LOGE(TAG, "SSD1306 init failed");
         vTaskDelete(NULL);

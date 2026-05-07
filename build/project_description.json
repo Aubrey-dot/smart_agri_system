@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "smart_agri_system",
-    "project_version":    "010ebfa-dirty",
+    "project_version":    "6fe50c0-dirty",
     "project_path":       "C:/Users/aubrey/Documents/Development/smart_agri_system",
     "idf_path":           "C:/esp/v6.0.1/esp-idf",
     "build_dir":          "C:/Users/aubrey/Documents/Development/smart_agri_system/build",
@@ -1805,12 +1805,12 @@
             "dir": "C:/Users/aubrey/Documents/Development/smart_agri_system/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "htu21d", "esp_driver_i2c", "nvs_flash", "fatfs", "spi_flash", "esp_timer" ],
+            "reqs": [ "htu21d", "esp_driver_i2c", "nvs_flash", "fatfs", "spi_flash", "esp_timer", "esp_wifi" ],
             "priv_reqs": [ "k0i05__esp_ssd1306" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "k0i05__esp_ssd1306" ],
             "file": "C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/aubrey/Documents/Development/smart_agri_system/main/shared_data.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/main.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/sensor_task.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/display_task.c" ],
+            "sources": [ "C:/Users/aubrey/Documents/Development/smart_agri_system/main/shared_data.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/main.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/sensor_task.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/display_task.c", "C:/Users/aubrey/Documents/Development/smart_agri_system/main/mqqt_task.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -3944,7 +3944,7 @@
             "dir": "C:/Users/aubrey/Documents/Development/smart_agri_system/main",
             "source": "project_components",
             "lib": "__idf_main",
-            "reqs": [ "htu21d", "esp_driver_i2c", "nvs_flash", "fatfs", "spi_flash", "esp_timer" ],
+            "reqs": [ "htu21d", "esp_driver_i2c", "nvs_flash", "fatfs", "spi_flash", "esp_timer", "esp_wifi" ],
             "priv_reqs": [ "k0i05__esp_ssd1306" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "k0i05__esp_ssd1306" ],
