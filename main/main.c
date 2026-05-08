@@ -6,6 +6,8 @@
 #include "htu21d.h"
 #include "sensor_task.h"
 #include "display_task.h"
+#include "wifi_manager.h"
+#include "app_config.h"
 
 static const char *TAG = "MAIN";
 
@@ -42,6 +44,13 @@ void app_main(void)
     //init HTU21D
     static htu21d_handle_t htu21d;
     ESP_ERROR_CHECK(htu21d_init(bus_handle, &htu21d));
+
+    //wifi_manager
+    ESP_ERROR_CHECK(wifi_manager_init());
+    esp_err_t ret = wifi_manager_connect(WIFI_SSID,WIFI_PASSWORD);
+    if (ret != ESP_OK){
+        ESP_LOGE(TAG, "WIFI Connection Failed");
+    }
 
     //sensor task
     xTaskCreatePinnedToCore(

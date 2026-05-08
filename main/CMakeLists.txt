@@ -4,7 +4,7 @@ idf_component_register(
         "main.c"
         "sensor_task.c"
         "display_task.c"
-        "mqqt_task.c"
+        "wifi_manager.c"
     INCLUDE_DIRS "."
     REQUIRES
         htu21d
