@@ -5,6 +5,7 @@ idf_component_register(
         "sensor_task.c"
         "display_task.c"
         "wifi_manager.c"
+        "mqtt_task.c"
     INCLUDE_DIRS "."
     REQUIRES
         htu21d
@@ -13,5 +14,6 @@ idf_component_register(
         fatfs
         spi_flash
         esp_timer
-        esp_wifi       
+        esp_wifi
+        mqtt      
                     )

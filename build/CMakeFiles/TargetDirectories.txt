@@ -1096,6 +1096,13 @@ C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMa
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/install.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/install/local.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/htu21d/CMakeFiles/install/strip.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/espressif__mqtt/CMakeFiles/__idf_espressif__mqtt.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/espressif__mqtt/CMakeFiles/edit_cache.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/espressif__mqtt/CMakeFiles/rebuild_cache.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/espressif__mqtt/CMakeFiles/list_install_components.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/espressif__mqtt/CMakeFiles/install.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/espressif__mqtt/CMakeFiles/install/local.dir
+C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/espressif__mqtt/CMakeFiles/install/strip.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/k0i05__esp_type_utils/CMakeFiles/__idf_k0i05__esp_type_utils.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/k0i05__esp_type_utils/CMakeFiles/edit_cache.dir
 C:/Users/aubrey/Documents/Development/smart_agri_system/build/esp-idf/k0i05__esp_type_utils/CMakeFiles/rebuild_cache.dir

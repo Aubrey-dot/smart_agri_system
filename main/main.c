@@ -8,6 +8,7 @@
 #include "display_task.h"
 #include "wifi_manager.h"
 #include "app_config.h"
+#include "mqtt_task.h"
 
 static const char *TAG = "MAIN";
 
@@ -50,6 +51,7 @@ void app_main(void)
     esp_err_t ret = wifi_manager_connect(WIFI_SSID,WIFI_PASSWORD);
     if (ret != ESP_OK){
         ESP_LOGE(TAG, "WIFI Connection Failed");
+        return;
     }
 
     //sensor task
@@ -64,15 +66,24 @@ void app_main(void)
     );
 
     //display task
-    display_task_params_t disp_params = {
-        .bus = bus_handle
-    };
+    static display_task_params_t disp_params;
+    disp_params.bus = bus_handle;
     
     xTaskCreatePinnedToCore(
         display_task,
         "display_task",
         4096,
         &disp_params,
+        4,
+        NULL,
+        1
+    );
+
+    xTaskCreatePinnedToCore(
+        mqtt_task,
+        "mqtt_task",
+        4096,
+        NULL,
         4,
         NULL,
         1
